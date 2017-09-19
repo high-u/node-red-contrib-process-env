@@ -1,5 +1,11 @@
 # node-red-contrib-process-env
 
+## Released
+
+|Date|Version|Description|
+|:--:|:-----:|:----------|
+|2017-09-19|0.1.4|Enabled to specify payload.|
+
 ## Feature
 
 * get process.env

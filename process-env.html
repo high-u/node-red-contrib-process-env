@@ -1,15 +1,16 @@
 <script type='text/javascript'>
     RED.nodes.registerType('process-env', {
-        category: 'advanced-input',
+        category: 'advanced',
         color: '#cccccc',
         defaults: {
-            name: { value: 'process.env' }
+            name: { value: '' },
+            into: { value: 'payload' }
         },
         inputs: 1,
         outputs: 1,
         icon: 'env.png',
         label: function () {
-            return this.name;
+            return this.name || 'process.env';
         }
     });
 </script>
@@ -17,6 +18,10 @@
     <div class='form-row'>
         <label for='node-input-name'><i class='fa fa-tag'></i>Name</label>
         <input type='text' id='node-input-name' placeholder='Name'>
+    </div>
+    <div class="form-row">
+        <label for="node-input-into"><i class="fa fa-tag"></i>Into</label>
+        msg.<input type="text" id="node-input-into" placeholder='payload'>
     </div>
 </script>
 <script type='text/x-red' data-help-name='process-env'>

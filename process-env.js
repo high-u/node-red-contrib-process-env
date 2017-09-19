@@ -1,9 +1,10 @@
 module.exports = function (RED) {
     function envNode(config) {
         RED.nodes.createNode(this, config);
+        this.into = config.into;
         var node = this;
         this.on('input', function (msg) {
-            msg.payload = process.env;
+            msg[node.into] = process.env;
             node.send(msg);
         });
     }
