@@ -16,14 +16,34 @@
 </script>
 <script type='text/x-red' data-template-name='process-env'>
     <div class='form-row'>
-        <label for='node-input-name'><i class='fa fa-tag'></i>Name</label>
+        <label for='node-input-name'><i class='fa fa-tag'></i> Name</label>
         <input type='text' id='node-input-name' placeholder='Name'>
     </div>
     <div class="form-row">
-        <label for="node-input-into"><i class="fa fa-tag"></i>Into</label>
+        <label for="node-input-into"><i class="fa fa-tag"></i> Into</label>
         msg.<input type="text" id="node-input-into" placeholder='payload'>
     </div>
 </script>
 <script type='text/x-red' data-help-name='process-env'>
-    <dl><dt>output</dt><dd>msg.payload = process.env;</dd></dl>
+<h3>Input - Case 1</h3>
+<dl class="message-properties">
+    <dt>Not set msg.env</dt>
+    <dd>
+    </dd>
+</dl>
+<h3>Input - Case 2</h3>
+<dl class="message-properties">
+    <dt>Set msg.env</dt>
+    <dd>
+        Value (ENV Name) replaces.
+<pre>
+<code>msg.env = {
+    "lang": "LANG",
+    "shell": "SHELL",
+    "path": "PATH"
+}</code>
+</pre>
+    </dd>
+</dl>
+
 </script>
