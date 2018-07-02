@@ -108,7 +108,7 @@ msg.payload = {
 
 ### Case 2
 
-![Example Flow Case 2](https://raw.githubusercontent.com/high-u/node-red-contrib-process-env/master/screenshots/example-flow.png)
+![Example Flow Case 2](https://raw.githubusercontent.com/high-u/node-red-contrib-process-env/master/screenshots/example-flow2.png)
 
 ```
 [
